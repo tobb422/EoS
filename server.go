@@ -1,17 +1,38 @@
 package main
 
-import (
-  "net/http"
-  "github.com/labstack/echo"
+import(
+  "github.com/go-martini/martini"
+  "github.com/martini-contrib/render"
 )
+
+type IndexViewModel struct {
+    Title string
+    Description string
+}
+
+func IndexRender(r render.Render) {
+
+  viewModel := IndexViewModel{
+      "Martini Demo",
+      "Description",
+  }
+
+  r.HTML(200, "index", viewModel)
+}
 
 func main() {
 
-    e := echo.New()
+  m := martini.Classic()
 
-    e.GET("/", func(c echo.Context) error {
-        return c.String(http.StatusOK, "Hello, World!")
-    })
+  m.Use(render.Renderer(render.Options{
+      Directory: "views",
+  }))
 
-    e.Logger.Fatal(e.Start(":8080"))
+  m.NotFound(func (r render.Render){
+      r.Redirect("/")
+  })
+
+  m.Get("/", IndexRender)
+  m.Run()
+
 }
