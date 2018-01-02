@@ -1,5 +1,5 @@
 class TestController < ApplicationController
 	def index
-		render text: 'Hello'
+		render json: 'Hello'
 	end
 end
