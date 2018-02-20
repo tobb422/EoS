@@ -1,7 +1,16 @@
-import Vue from 'vue'
-import App from '../../app.vue'
+import Vue from 'vue/dist/vue.esm'
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.body.appendChild(document.createElement('hello'))
-  const app = new Vue({ render: h => h(App) }).$mount('hello')
-})
+Vue.component('list', {
+  props: ['item'],
+  template: '<li>{{item.name}}</li>'
+});
+
+new Vue({
+  el: '#hello',
+  data: {
+    items: [
+      { name: 'Ruby' },
+      { name: 'Golang' },
+    ]
+  }
+});

@@ -9,14 +9,19 @@
 <body>
 	<header class="header">
 	</header>
-	<div class="wrapper clearfix">
-		<main class="main">
-		</main>
-		<div class="sidemenu">
+		<div class="wrapper clearfix">
+			<main class="main">
+				<div id="hello">
+					<ol>
+						<list v-for="item in items" v-bind:item="item" />
+					</ol>
+				</div>
+			</main>
+			<div class="sidemenu">
+			</div>
 		</div>
-	</div>
 	<footer class="footer">
 	</footer>
 </body>
 </html>
-<!-- <%= javascript_pack_tag 'test/index' %> -->
+<%= javascript_pack_tag 'test/index' %>
