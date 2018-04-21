@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "watch": "webpack --watch --progress",
     "start": "babel-node ./bin/www"
   },
   "dependencies": {
@@ -14,8 +15,16 @@
     "morgan": "~1.9.0"
   },
   "devDependencies": {
+    "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "install": "^0.11.0"
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "install": "^0.11.0",
+    "node-sass": "^4.8.3",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15"
   }
 }
