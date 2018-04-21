@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import index from './components/index.vue';
+import Index from './components/index.vue';
 
 const vm = new Vue({
   el: '#app',
@@ -39,6 +39,6 @@ const vm = new Vue({
     }
   },
   components: {
-    MyComponent: index
+    MyComponent: Index
   }
 })

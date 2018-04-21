@@ -3,11 +3,11 @@
 </template>
 
 <script>
-  export default {
-    data: function() {
-      return {
-        test: 'テストだよ'
-      };
-    }
+export default {
+  data: function() {
+    return {
+      test: 'テストだよ'
+    };
   }
+}
 </script>
