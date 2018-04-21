@@ -2,4 +2,13 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  div#app Original message: {{ message }}
+
+script.type='text/javascript'
+script.
+  var vm = new Vue({
+    el: '#app',
+    data: {
+      message: 'Hello'
+    }
+  })

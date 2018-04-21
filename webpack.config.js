@@ -29,23 +29,26 @@ module.exports = [
   },
   {
     context: path.join(__dirname, 'src/javascripts'),
-    entry: './src/javascripts/index.js',
+    resolve: {
+      alias: {
+        vue: 'vue/dist/vue.js'
+      }
+    },
+    entry: './index.js',
     output: {
       path: path.join(__dirname, 'public/javascripts'),
-      filename: '[name].js'
+      filename: 'index.js'
     },
     module: {
-      loaders: [
-        {
-          test: /\.vue$/, loader: 'vue'
-        }
+      rules: [
+        { test: /\.js$/, use: "babel-loader", exclude: /node_modules/　},
+        { test: /\.vue$/, use: 'vue' }
       ]
     },
     plugins: [
       new webpack.ProvidePlugin({
         $: 'jquery'
-      }),
-      new webpack.optimize.UglifyJsPlugin(),
+      })
     ]
   }
 ];
