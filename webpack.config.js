@@ -30,19 +30,26 @@ module.exports = [
   {
     context: path.join(__dirname, 'src/javascripts'),
     resolve: {
+      extensions: ['.js', '.vue'],
+      modules: [
+          "node_modules"
+      ],
       alias: {
         vue: 'vue/dist/vue.js'
       }
     },
-    entry: './index.js',
+    entry: {
+      'index.js': './index.js',
+      'components/index.vue': './components/index.vue'
+    },
     output: {
       path: path.join(__dirname, 'public/javascripts'),
-      filename: 'index.js'
+      filename: '[name]'
     },
     module: {
       rules: [
         { test: /\.js$/, use: "babel-loader", exclude: /node_modules/　},
-        { test: /\.vue$/, use: 'vue' }
+        { test: /\.vue$/, use: 'vue-loader', exclude: /node_modules/ }
       ]
     },
     plugins: [

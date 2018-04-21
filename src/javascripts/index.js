@@ -1,16 +1,5 @@
 import Vue from 'vue';
-
-const componentData = {
-  test: 'テストだよ'
-}
-
-const Child = {
-  template: '<div>{{ myMessage }}A custom child-component!{{ test }}</div>',
-  props: ['myMessage'],
-  data: function() {
-    return componentData;
-  }
-}
+import index from './components/index.vue';
 
 const vm = new Vue({
   el: '#app',
@@ -50,6 +39,6 @@ const vm = new Vue({
     }
   },
   components: {
-    'my-component': Child
+    MyComponent: index
   }
 })
