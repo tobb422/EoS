@@ -1,13 +1,7 @@
 <body>
   <div id="app" v-bind:class="{ active: isActive }">
     <main-component></main-component>
-    <li v-for="(item, index) in items">
-      {{ index }} - {{ item.message }}
-    </li>
-    <br/>
-    <li v-for="(value, key, index) in object">
-      {{ index }} - {{ key }} : {{ value }}
-    </li>
+    <for-component></for-component>
     <br/>
     <button v-on:click="add">Add 1</button>
     <p>The button above has been clicked {{ counter }} times.</p>

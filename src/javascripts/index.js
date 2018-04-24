@@ -1,20 +1,12 @@
 import Vue from 'vue';
 import Index from './components/index.vue';
 import Main from './components/index/main.vue';
+import For from './components/index/for.vue';
 
 const vm = new Vue({
   el: '#app',
   data: {
     isActive: false,
-    items: [
-      { message: 'Foo' },
-      { message: 'Bar' }
-    ],
-    object: {
-      firstName: 'John',
-      lastName: 'Doe',
-      age: 30
-    },
     counter: 0,
     message: "test",
     checked: false,
@@ -39,6 +31,7 @@ const vm = new Vue({
   },
   components: {
     MyComponent: Index,
-    MainComponent: Main
+    MainComponent: Main,
+    ForComponent: For
   }
 })
