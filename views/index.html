@@ -1,9 +1,6 @@
 <body>
   <div id="app" v-bind:class="{ active: isActive }">
-    <p>Original message: "{{ msg }}"</p>
-    <p v-if="ok">Computed reversed message: "{{ reversedMessage }}"</p>
-    <p v-else>test</p>
-
+    <main-component></main-component>
     <li v-for="(item, index) in items">
       {{ index }} - {{ item.message }}
     </li>
@@ -48,11 +45,6 @@
       <option>C</option>
     </select>
     <span>Selected: {{ selected }}</span>
-
-
-    <br>
-    <br>
-    <br>
     <my-component></my-component>
   </div>
 </body>

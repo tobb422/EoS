@@ -1,12 +1,11 @@
 import Vue from 'vue';
 import Index from './components/index.vue';
+import Main from './components/index/main.vue';
 
 const vm = new Vue({
   el: '#app',
   data: {
-    msg: 'Hello',
     isActive: false,
-    ok: true,
     items: [
       { message: 'Foo' },
       { message: 'Bar' }
@@ -39,6 +38,7 @@ const vm = new Vue({
     }
   },
   components: {
-    MyComponent: Index
+    MyComponent: Index,
+    MainComponent: Main
   }
 })
