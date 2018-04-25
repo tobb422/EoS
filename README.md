@@ -1,5 +1,6 @@
 # README
-mbos is Management by Objectives System
+EoS is Management by Objectives System.
+The Service Value is that Every day of the stack leads to success.
 
 ## Introduction of used technology
 Frontend: Vue.js with ES6  
