@@ -3,7 +3,7 @@ import Index from './components/index.vue';
 import Main from './components/index/main.vue';
 import For from './components/index/for.vue';
 
-const vm = new Vue({
+new Vue({
   el: '#app',
   data: {
     isActive: false,
@@ -22,10 +22,10 @@ const vm = new Vue({
     }
   },
   methods: {
-    add: function() {
+    add: function () {
       this.counter += 1;
     },
-    say: function(msg) {
+    say: function (msg) {
       alert(msg);
     }
   },
