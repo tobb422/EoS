@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "watch": "webpack --watch --progress",
-    "start": "babel-node ./bin/www"
+    "start": "babel-node ./bin/www",
+    "build": "webpack"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
